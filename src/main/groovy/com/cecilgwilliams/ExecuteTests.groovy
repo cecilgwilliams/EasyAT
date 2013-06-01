@@ -13,7 +13,7 @@ try {
 
     def firefox = BrowserFactory.getFirefox()
     firefox.manage().window().maximize()
-    new DemoScenarioRunner().run "scenarios/demo/demoScenario", firefox, demoEnv
+    new DemoScenarioRunner().run "scenarios/demo/viewPatientFromSchedule", firefox, demoEnv
 
 } catch (Exception e) {
     println e.message
