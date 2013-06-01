@@ -23,7 +23,27 @@ public class DemoUser {
 
      public loginAsDoctor() {
         currentPage.findElementById("loginPhotoP_dmitchell").click()
-         sleep(1000)
+         sleep(10000)
         currentPage.findElementById("Passworddmitchell_I").sendKeys(Keys.ENTER)
+    }
+
+     public viewTodaysVisits() {
+        currentPage.findElementByXpath("//a[@href='/RWA/ClinicalStudy/DataCapture/Schedule']", 5).click()
+    }
+
+    public viewSubjectCE(){
+        currentPage.findElementByLinkText("CE").click()
+    }
+
+    public logout(){
+        currentPage.findElementById("btnLogout_CD").click()
+    }
+
+    public closeBrowser(){
+        browser.quit()
+    }
+
+    public sleep(){
+        sleep(10000)
     }
 }

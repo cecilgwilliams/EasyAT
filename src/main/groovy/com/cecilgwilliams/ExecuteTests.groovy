@@ -8,10 +8,11 @@ try {
     def demoEnv = EnvironmentFactory.getDemo()
 
 //    def chrome = BrowserFactory.getChrome()
-//    chrome.manage().window().maximize();
+//    chrome.manage().window().maximize()
 //    new DemoScenarioRunner().run "scenarios/demo/demoScenario", chrome, demoEnv
 
     def firefox = BrowserFactory.getFirefox()
+    firefox.manage().window().maximize()
     new DemoScenarioRunner().run "scenarios/demo/demoScenario", firefox, demoEnv
 
 } catch (Exception e) {
