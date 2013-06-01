@@ -8,6 +8,7 @@ try {
     def demoEnv = EnvironmentFactory.getDemo()
 
     def chrome = BrowserFactory.getChrome()
+    chrome.manage().window().maximize();
     new DemoScenarioRunner().run "scenarios/demo/posScenario", chrome, demoEnv
 
 //    def firefox = BrowserFactory.getFirefox()

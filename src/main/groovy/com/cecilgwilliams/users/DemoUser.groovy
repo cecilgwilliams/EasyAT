@@ -24,7 +24,7 @@ public class DemoUser {
     }
 
     public verifyMainWindow() {
-        currentPage.verifyTextPresent("Welcome to Openbravo POS", 10)
+        currentPage.verifyTextPresent("DevExpress Clinical Study", 10)
     }
 
     public login() {
