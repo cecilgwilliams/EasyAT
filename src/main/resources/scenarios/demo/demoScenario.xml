@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<actions id="checkDomainName">
+<actions id="demo">
     <action>navigateToDemoSite</action>
     <action>login</action>
     <action>verifyMainWindow</action>
