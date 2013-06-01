@@ -15,7 +15,9 @@ try {
     new DemoScenarioRunner().run "scenarios/demo/demoScenario", firefox, demoEnv
 
 } catch (Exception e) {
-    BrowserFactory.killAll()
+    println e.message
+} finally {
+//    BrowserFactory.killAll()
 }
 
 

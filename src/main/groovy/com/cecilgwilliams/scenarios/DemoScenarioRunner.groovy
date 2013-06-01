@@ -20,7 +20,6 @@ public class DemoScenarioRunner extends ScenarioRunner {
                 { Browser browser, Environment environment ->
                     def demoUser = new DemoUser(browser, environment)
                     ${sb.toString()}
-                    browser.quit()
                 }
 
             """
