@@ -3,7 +3,6 @@ package com.cecilgwilliams.users
 import com.cecilgwilliams.browsers.Browser
 import com.cecilgwilliams.environments.Environment
 import com.cecilgwilliams.pages.WebPage
-import org.openqa.selenium.Keys
 
 public class DemoUser {
 
@@ -11,28 +10,18 @@ public class DemoUser {
     private Browser browser
     private WebPage currentPage
 
-    DemoUser(Browser browser, Environment environment) {
+    @Delegate
+    private DoctorMitchell doctor
+
+    DemoUser(Browser browser, Environment env) {
         this.browser = browser
-        this.env = environment
+        this.env = env
+        doctor = new DoctorMitchell(browser, env)
     }
 
     public navigateToDemoSite() {
         currentPage = new WebPage(browser)
         currentPage.navigateTo(env.url)
-    }
-
-     public loginAsDoctor() {
-        currentPage.findElementById("loginPhotoP_dmitchell").click()
-         sleep(10000)
-        currentPage.findElementById("Passworddmitchell_I").sendKeys(Keys.ENTER)
-    }
-
-     public viewTodaysVisits() {
-        currentPage.findElementByXpath("//a[@href='/RWA/ClinicalStudy/DataCapture/Schedule']", 5).click()
-    }
-
-    public viewSubjectCE(){
-        currentPage.findElementByLinkText("CE").click()
     }
 
     public logout(){
