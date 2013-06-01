@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<actions id="viewPatientFromSchedule">
+<actions id="viewPatientsReport">
     <action>navigateToDemoSite</action>
     <action>sleep</action>
-    <action>loginAsDoctor</action>
+    <action>loginAsSupervisor</action>
     <action>sleep</action>
-    <action>viewTodaysVisits</action>
-    <action>sleep</action>
-    <action>viewSubjectCE</action>
+    <action>viewPatientsReport</action>
     <action>sleep</action>
     <action>logout</action>
 </actions>

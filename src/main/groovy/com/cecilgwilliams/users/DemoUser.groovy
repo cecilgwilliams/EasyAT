@@ -12,11 +12,14 @@ public class DemoUser {
 
     @Delegate
     private DoctorMitchell doctor
+    @Delegate
+    private SupervisorOliver supervisor
 
     DemoUser(Browser browser, Environment env) {
         this.browser = browser
         this.env = env
         doctor = new DoctorMitchell(browser, env)
+        supervisor = new SupervisorOliver(browser, env)
     }
 
     public navigateToDemoSite() {
