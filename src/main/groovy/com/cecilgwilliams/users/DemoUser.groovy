@@ -36,6 +36,6 @@ public class DemoUser {
     }
 
     public sleep(){
-        sleep(10000)
+        sleep(5000)
     }
 }
